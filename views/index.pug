@@ -1,0 +1,89 @@
+doctype HTML
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Teste - 123Projetei
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+    body
+            div.row.justify-content-center
+                div.col-md-8
+                    div.card.bg-light.mb-3(style="max-widht:18rem")
+                        h1.card-header.text-center Administração de Usuários
+                        form(method="post" action="/adduser")
+                        div.card-body
+                            div.form-group.row
+                                label.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='nome') Nome Completo
+                                div.col-md-6
+                                    input#nome.form-control(type='text' name='nome' required autofocus)
+
+                            div.form-group.row
+                                label.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='telefone') Telefone
+                                div.col-md-6
+                                    input#telefone.form-control(type='text' name='telefone' required)
+
+                            div.form-group.row
+                                label.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='data_nasc') Data de Nascimento
+                                div.col-lg-2.col-md-6
+                                    input#data_nasc.form-control(type='text' name='data_nasc' required)
+                                label.col-lg-1.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='cpf') CPF
+                                div.col-lg-3.col-md-6
+                                    input#cpf.form-control(type='text' name='cpf' required)
+
+                            div.form-group.row
+                                label.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='rg') RG
+                                div.col-lg-3.col-md-6
+                                    input#rg.form-control(type='text' name='rg' required)
+                                label.col-lg-1.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='cep') CEP
+                                div.col-lg-2.col-md-6.mt-md-3.mt-lg-0
+                                    input#cep.form-control(type='text' name='cep' required)
+
+                            div.form-group.row
+                                label.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='endereco') Endereco
+                                div.col-md-6
+                                    input#endereco.form-control(type='text' name='endereco' required autofocus)
+
+                            div.form-group.row.d-flex.justify-content-end
+                            div.col-md-8.offset-md-8
+                                button.btn.btn-primary(type="submit") Cadastrar
+
+                            table.table.table-striped.mt-5.table-responsive
+                                thead
+                                    tr
+                                        th.text-center.text-uppercase(scope='col') Nome
+                                        th.text-center.text-uppercase(scope='col') Telefone
+                                        th.text-center.text-uppercase(scope='col') Data de Nascimento
+                                        th.text-center.text-uppercase(scope='col') RG
+                                        th.text-center.text-uppercase(scope='col') CPF
+                                        th.text-center.text-uppercase(scope='col') Endereço
+                                        th.text-center.text-uppercase(scope='col') Cidade
+                                        th.text-center.text-uppercase(scope='col') Estado
+                                        th.text-center.text-uppercase(scope='col') CEP
+                                        th.text-center.text-uppercase(scope='col') Ações
+
+                                tbody
+                                    tr
+                                        th.text-center(scope='row') Leo
+                                        th.text-center(scope='row') 99999-9999
+                                        th.text-center(scope='row') 1999-06-01
+                                        th.text-center(scope='row') 87654321
+                                        th.text-center(scope='row') 123.456.780-00
+                                        th.text-center(scope='row') Bento
+                                        th.text-center(scope='row') Pelotas
+                                        th.text-center(scope='row') RS
+                                        th.text-center(scope='row') 96222-000
+                                        th 
+                                            a.btn.btn-warning.btn-sm(title='Alterar' role='button') Alterar
+                                            form(style='display: inline-block' method='post' onsubmit="return confirm('Confirma Exclusão?')")
+                                            button.btn.btn-danger.btn-sm(type='submit' title='Excluir') Excluir
+
+//- var telefone = IMask(
+//- document.getElementById('telefone'), {
+//- mask: '00000-0000'
+//- });
+
+    script(src='https://unpkg.com/imask')
+    script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
