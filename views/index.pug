@@ -44,6 +44,14 @@ html(lang="en")
                                 div.col-md-6
                                     input#endereco.form-control(type='text' name='endereco' required autofocus)
 
+                             div.form-group.row
+                                label.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='cidade') Cidade
+                                div.col-lg-3.col-md-6
+                                    input#cidade.form-control(type='text' name='cidade' required)
+                                label.col-lg-1.col-md-4.col-form-label.text-md-right.text-uppercase.font-weight-bold(for='estado') Estado
+                                div.col-lg-2.col-md-6.mt-md-3.mt-lg-0
+                                    input#estado.form-control(type='text' name='estado' required)
+
                             div.form-group.row.d-flex.justify-content-end
                             div.col-md-8.offset-md-8
                                 button.btn.btn-primary(type="submit") Cadastrar

@@ -53,7 +53,9 @@ const UsuarioSchema = mongoose.Schema({
 
 mongoose.model('usuarios', UsuarioSchema )
 
-new UsuarioSchema ({
+const Leo = mongoose.model('usuarios')
+
+new Leo ({
     nome: "Leo",
     telefone: 88773355,
     data_nasc: "04-04-1992",
